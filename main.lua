@@ -1,4 +1,4 @@
--- Meant to run at async context. (yazi system-clipboard)
+-- Meant to run at async context. (yazi wl-clipboard)
 
 local selected_or_hovered = ya.sync(function()
 	local tab, paths = cx.active, {}
@@ -18,7 +18,7 @@ return {
 		local urls = selected_or_hovered()
 
 		if #urls == 0 then
-			return ya.notify({ title = "System Clipboard", content = "No file selected", level = "warn", timeout = 5 })
+			return ya.notify({ title = "Wayland Clipboard", content = "No file selected", level = "warn", timeout = 5 })
 		end
 
 		-- ya.notify({ title = #urls, content = table.concat(urls, " "), level = "info", timeout = 5 })
@@ -41,7 +41,7 @@ return {
 
 		if status or status.succes then
 			ya.notify({
-				title = "System Clipboard",
+				title = "Wayland Clipboard",
 				content = "Succesfully copied the file(s) to system clipboard",
 				level = "info",
 				timeout = 5,
@@ -50,7 +50,7 @@ return {
 
 		if not status or not status.success then
 			ya.notify({
-				title = "System Clipboard",
+				title = "Wayland Clipboard",
 				content = string.format("Could not copy selected file(s) %s", status and status.code or err),
 				level = "error",
 				timeout = 5,

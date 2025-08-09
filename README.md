@@ -1,6 +1,14 @@
 # wl-clipboard.yazi
 
+Forked from: [grappas/wl-clipboard.yazi](https://github.com/grappas/wl-clipboard.yazi)  
+(due to inactivity)
+
+... which was ...
+
+
 Forked from: [orhnk/system-clipboard.yazi](https://github.com/orhnk/system-clipboard.yazi) to work with wayland compositors.
+
+All credit to original authors.
 
 ## Demo
 
@@ -9,7 +17,7 @@ Forked from: [orhnk/system-clipboard.yazi](https://github.com/orhnk/system-clipb
 ## Config
 
 > [!NOTE]
-> You need yazi 3.x for this plugin to work.
+> You need yazi v25.2.7+ for this plugin to work.
 
 > [!Important]
 > This plugin utilizes ["wl-clipboard" project](https://github.com/bugaevc/wl-clipboard).
@@ -18,7 +26,7 @@ Forked from: [orhnk/system-clipboard.yazi](https://github.com/orhnk/system-clipb
 ## Installation
 
 ```bash
-ya pack -a grappas/wl-clipboard
+ya pkg add equals03/wl-clipboard
 ```
 
 ## Configuration
